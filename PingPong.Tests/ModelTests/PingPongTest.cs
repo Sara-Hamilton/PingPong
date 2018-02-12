@@ -28,5 +28,12 @@ namespace PingPong.Tests
       PingPongGenerator testPingPong = new PingPongGenerator();
       CollectionAssert.AreEqual(new List<string>(){"1","2","ping","4","pong"}, testPingPong.PingPong(5));
     }
+
+    [TestMethod]
+    public void PingPong_ThreeAndFiveToPingPong_Array()
+    {
+      PingPongGenerator testPingPong = new PingPongGenerator();
+      CollectionAssert.AreEqual(new List<string>(){"1","2","ping","4","pong","ping","7","8","ping","pong","11","ping","13","14","ping-pong"}, testPingPong.PingPong(15));
+    }
   }
 }
