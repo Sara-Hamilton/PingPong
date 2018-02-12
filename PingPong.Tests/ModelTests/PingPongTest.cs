@@ -20,7 +20,6 @@ namespace PingPong.Tests
     {
       PingPongGenerator testPingPong = new PingPongGenerator();
       CollectionAssert.AreEqual(new List<string>(){"1","2","ping","4","5"}, testPingPong.PingPong(5));
-
     }
   }
 }
