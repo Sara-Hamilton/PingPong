@@ -1,4 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
+using System;
 using PingPong;
 
 namespace PingPong.Tests
@@ -10,7 +12,7 @@ namespace PingPong.Tests
     public void PingPong_ReturnsAnArray_Array()
     {
       PingPongGenerator testPingPong = new PingPongGenerator();
-      Assert.AreEqual("1,2,3,4,5", testPingPong.PingPong(5));
+      CollectionAssert.AreEqual(new List<string>(){"1","2","3","4","5"}, testPingPong.PingPong(5));
     }
   }
 }
